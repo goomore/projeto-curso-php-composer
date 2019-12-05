@@ -8,8 +8,11 @@ RUN apt-get install -y \
         unzip \
         && docker-php-ext-install zip
 
-#Baixa o Composer
+# BAIXA O COMPOSER 
 RUN curl https://getcomposer.org/composer.phar --output /usr/bin/composer
-
+# DÁ A PERMISSÃO PARA TODOS EXECUTAREM PARA TUDO QUE ESTÁ DENTRO DA PASTA COMPOSER
 RUN chmod +x /usr/bin/composer
+
 WORKDIR /php7
+COPY entrypoint.sh /usr/local/bin/entrypoint.sh
+ENTRYPOINT [ "sh", "/usr/local/bin/entrypoint.sh" ]
