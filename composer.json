@@ -1,6 +1,19 @@
 {
+    "name": "goomore/projeto-curso-php-composer",
+    "description": "Os primeiros passos com o composer",
+
     "require": {
-        "vlucas/phpdotenv": "^4.0",
         "cocur/slugify": "^3.2"
+    },
+    "require-dev": {
+        "vlucas/phpdotenv": "^4.0",
+        "phpunit/phpunit": "^8.4",
+        "squizlabs/php_codesniffer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PHPConf\\": "src"
+        }
     }
+
 }
