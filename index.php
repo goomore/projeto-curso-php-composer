@@ -9,3 +9,5 @@ if (file_exists ('.env')) {
     $dotenv->load();
 }
 
+$slugify = new Slugify();
+echo $slugify->slugify('Hello World!');
